@@ -1,0 +1,22 @@
+<script>
+    properties.writeups = [
+        {
+            title: "Writeup 1",
+            content: "Writeup 1 content",
+            date: "2021-01-01"
+        },
+        {
+            title: "Writeup 2",
+            content: "Writeup 2 content",
+            date: "2021-01-02"
+        }
+    ];
+</script>
+<h2>Writeups</h2>
+<div data-foreach-writeup="writeups">
+    <article>
+        <h3 data-bind="writeup.title"></h3>
+        <p data-bind="writeup.content"></p>
+        <datetime data-bind="writeup.date"></datetime>
+    </article>
+</div>
