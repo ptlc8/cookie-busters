@@ -3,21 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width initial-scale=1" />
-    <title>Cookie busters</title>
+    <title data-bind="(pages[currentPageId] ?? 'Home') + ' - Cookie Busters'" data-update="currentPageId">Cookie busters</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/gh/ptlc8/anchovy@master/anchovy.js"></script>
     <script>
-        properties.pages = ["timeline", "writeups", "tags"];
-        properties.currentPage = "home";
+        properties.pages = {
+            timeline: "Timeline",
+            writeups: "Writeups",
+            tags: "Tags",
+        };
+        let hash = location.hash.replace('#', '');
+        properties.currentPageId = hash in properties.pages ? hash : 'home';
     </script>
 </head>
 <body>
     <header>
         <img src="assets/icon.webp" alt="Icon" />
-        <h1 data-on-click="currentPage='home'">Cookie busters</h1>
-        <navbar data-foreach-page="pages">
-            <a data-on-click="currentPage=page" data-bind="page" data-bind-class="currentPage==page?'selected':''" data-update="currentPage"></a>
+        <h1 data-on-click="[currentPageId, location.hash] = ['home', '']">Cookie busters</h1>
+        <navbar data-foreach-page="pages" data-index="pageId">
+            <a data-on-click="currentPageId=pageId" data-bind="pages[pageId]" data-bind-class="currentPageId == pageId ? 'selected' : ''" data-bind-href="'#' + pageId" data-update="currentPageId"></a>
         </navbar>
     </header>
-    <main data-bind-data-view="'components/' + currentPage + '.html'" data-update="currentPage"></main>
+    <main data-bind-data-view="'components/' + currentPageId + '.html'" data-update="currentPageId"></main>
 </body>
