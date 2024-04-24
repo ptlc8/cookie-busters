@@ -125,6 +125,13 @@ article h3 {
     border-radius: .4em;
 }
 
+.markdown img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
 .glitch { /* https://codepen.io/cbanlawi/pen/xxRBeMY */
     animation: glitch 750ms infinite;
 }
