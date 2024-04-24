@@ -26,8 +26,10 @@
 </head>
 <body>
     <header>
-        <img src="assets/icon.webp" alt="Icon" />
-        <h1 class="glitch" data-on-click="[currentPageId, location.hash] = ['home', '']">Cookie busters</h1>
+        <div data-on-click="[currentPageId, location.hash] = ['home', '']">
+            <img src="assets/icon.webp" alt="Icon" />
+            <h1 class="glitch">Cookie busters</h1>
+        </div>
         <navbar data-foreach-page="pages" data-index="pageId">
             <a data-on-click="currentPageId=pageId" data-bind="pages[pageId]" data-bind-class="currentPageId == pageId ? 'selected' : ''" data-bind-href="'#' + pageId" data-update="currentPageId"></a>
         </navbar>
