@@ -11,5 +11,34 @@
         "content": "Writeup 2 content",
         "date": "2024-02-16",
         "tags": ["exploit"]
+    },
+    {
+        "title": "[TeamItalyCTF-2023] LIGAbue",
+        "content": "j’ai téléchargé le fichier du challenge: \"chall.otf\"
+					je me suis ensuite renseigné sur le format du fichier. C’est un type de fichier qui contient une police
+					d’écriture.
+					Voici ce qu’on obtient en l’affichant :
+					/assets/writeups/LIGAbue/LIGAbue0
+					Rien de très concluant…
+					J’ai ensuite cherché des chaines de caractères cachées dans le fichier:
+					/assets/writeups/LIGAbue/LIGAbue1
+					/assets/writeups/LIGAbue/LIGAbue2
+					On y trouve un lien vers une video youtube https://www.youtube.com/watch?v=g6tuepmUmJg
+					et cette suite de nombre allant de s0000 à s2047.
+					J’ai ensuite téléchargé un logiciel d’édition de police et j’ai ouvert le fichier dedans.
+					On peut y voir notre main et rien pour les autres lettres.
+					/assets/writeups/LIGAbue/LIGAbue3
+					Mais en allant tout en bas du fichier, on retrouve une suite de \"NO\" numéroté de s0000 à s2047.
+					/assets/writeups/LIGAbue/LIGAbue4
+					mais parmis ces \"NO\" il y a un \"YES\" s1773
+					En regardant les infos du glyph, on trouve un autre nombre s1548 ainsi qu’un caractère \"}\". C’est
+					le symbole de fin du flag qui suit la nomenclature «flag{...} » ainsi que la référence du caractère
+					suivant (s1548 qui nous donne \" !\"ainsi que la référence suivante)
+					/assets/writeups/LIGAbue/LIGAbue5
+					On continue ainsi jusqu’à récupérer tout le flag :
+					flag{f0nt_l1g4tur3s_c4n_b3_4_f1n173_s7at3_m4ch1n3!!}
+		",
+        "date": "2023-09-30",
+        "tags": ["stenography"]
     }
 ]
