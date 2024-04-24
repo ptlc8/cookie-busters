@@ -1,12 +1,14 @@
 <script>
 function sortByMonth(writeups) {
-    return writeups.reduce((acc, writeup) => {
-        let month = new Date(writeup.date).toLocaleDateString("fr-FR", {month: "long", year: "numeric"});
-        if (!acc[month])
-            acc[month] = []
-        acc[month].push(writeup);
-        return acc;
-    }, {});
+    return writeups
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .reduce((acc, writeup) => {
+            let month = new Date(writeup.date).toLocaleDateString("fr-FR", {month: "long", year: "numeric"});
+            if (!acc[month])
+                acc[month] = []
+            acc[month].push(writeup);
+            return acc;
+        }, {});
 }
 </script>
 

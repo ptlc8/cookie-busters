@@ -1,11 +1,17 @@
 <script>
-    properties.selectedWriteup;
+markdownParser = new marked.Marked();
+markdownParser.use(markedBaseUrl.baseUrl("writeups/" + properties.selectedWriteup.id + "/"));
+
+properties.writeupContent = '';
+fetch('writeups/' + properties.selectedWriteup.id + '/content.md')
+    .then(response => response.ok && response.text())
+    .then(data => properties.writeupContent = data || '*Erreur de chargement du contenu*');
 </script>
 
 <section>
     <h2 data-bind="selectedWriteup.title"></h2>
     
-    <div class="markdown" data-html="marked.parse(selectedWriteup.content)"></div>
+    <div class="markdown" data-html="markdownParser.parse(writeupContent)" data-update="writeupContent"></div>
     
     <hr />
     <div>

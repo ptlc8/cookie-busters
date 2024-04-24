@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://ambi.dev/anchovy/anchovy.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked-base-url"></script>
     <script>
         properties.pages = {
             timeline: "Chronologie",
@@ -20,6 +21,7 @@
         fetch('writeups.json')
             .then(response => response.json())
             .then(data => properties.writeups = data);
+        properties.selectedWriteup = null;
     </script>
 </head>
 <body>
