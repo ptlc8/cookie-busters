@@ -1,0 +1,20 @@
+<script>
+    properties.selectedWriteup;
+</script>
+
+<section>
+    <h2 data-bind="selectedWriteup.title"></h2>
+    
+    <div data-html="marked.parse(selectedWriteup.content)"></div>
+    
+    <hr />
+    <div>
+        <datetime data-bind="new Date(selectedWriteup.date).toLocaleDateString('fr-FR', {day:'numeric',month:'long',year:'numeric'})"></datetime>
+        <span data-foreach-author="selectedWriteup.authors">
+            <button class="author" data-bind="author"></button>
+        </span>
+        <span data-foreach-tag="selectedWriteup.tags">
+            <button class="tag" data-bind="tag"></button>
+        </span>
+    </div>
+</section>

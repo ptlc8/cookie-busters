@@ -6,14 +6,20 @@
     <title data-bind="(pages[currentPageId] ?? 'Home') + ' - Cookie Busters'" data-update="currentPageId">Cookie busters</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/gh/ptlc8/anchovy@master/anchovy.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         properties.pages = {
-            timeline: "Timeline",
-            writeups: "Writeups",
-            tags: "Tags",
+            timeline: "Chronologie",
+            writeups: "Comptes rendus",
+            tags: "Catégories",
         };
         let hash = location.hash.replace('#', '');
         properties.currentPageId = hash in properties.pages ? hash : 'home';
+
+        properties.writeups = [];
+        fetch('writeups.json')
+            .then(response => response.json())
+            .then(data => properties.writeups = data);
     </script>
 </head>
 <body>

@@ -79,8 +79,15 @@ h2 {
     width: 16em;
 }
 
+section {
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 0.4em;
+    margin-bottom: 1em;
+}
+
 article {
-    background: #fff;
+    background: #ffffff;
     border-radius: 0.4em;
     padding: 1em;
     margin-bottom: 1em;
@@ -91,30 +98,54 @@ article h3 {
     margin: 0;
 }
 
+.tag, .author {
+    display: inline-block;
+    background-color: #f1f1f1;
+    padding: .4em;
+    border: 0;
+    border-radius: .4em;
+    cursor: pointer;
+}
+
+.tag:before {
+    content: '🏷️ ';
+}
+
+.author:before {
+    content: '👤 ';
+}
+
+.tag .count, .author .count {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 0 .4em;
+    text-align: center;
+    border-radius: .4em;
+}
 
 .glitch { /* https://codepen.io/cbanlawi/pen/xxRBeMY */
     animation: glitch 750ms infinite;
 }
 @keyframes glitch {
     0% {
-        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+        text-shadow: 0.1em 0 0 #00fffc, -0.06em -0.08em 0 #fc00ff, 0.05em 0.08em 0 #fffc00;
     }
     15% {
-        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+        text-shadow: 0.1em 0 0 #00fffc, -0.06em -0.08em 0 #fc00ff, 0.05em 0.08em 0 #fffc00;
     }
     16% {
-        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+        text-shadow: -0.1em -0.05em 0 #00fffc, 0.05em 0.07em 0 #fc00ff, -0.1em -0.1em 0 #fffc00;
     }
     49% {
-        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+        text-shadow: -0.1em -0.05em 0 #00fffc, 0.05em 0.07em 0 #fc00ff, -0.1em -0.1em 0 #fffc00;
     }
     50% {
-        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+        text-shadow: 0.1em 0.07em 0 #00fffc, 0.06em 0 0 #fc00ff, 0 -0.08em 0 #fffc00;
     }
     99% {
-        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+        text-shadow: 0.1em 0.07em 0 #00fffc, 0.06em 0 0 #fc00ff, 0 -0.08em 0 #fffc00;
     }
     100% {
-        text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff, -0.04em -0.025em 0 #fffc00;
+        text-shadow: -0.1em 0 0 #00fffc, -0.05em -0.08em 0 #fc00ff, -0.08em -0.05em 0 #fffc00;
     }
 }

@@ -8,23 +8,27 @@ function sortByMonth(writeups) {
         return acc;
     }, {});
 }
-
-properties.writeups = properties.writeups ?? [];
-fetch('writeups.json')
-    .then(response => response.json())
-    .then(data => properties.writeups = data);
+function getResume(writeup) {
+    return marked.parse(writeup.content).slice(0, 256);
+}
 </script>
 
-<h2>Timeline</h2>
+<h2>Chronologie</h2>
 <div data-foreach-writeups-by-month="sortByMonth(writeups)" data-index="month" data-update="writeups">
     <div>
         <h3 data-bind="month"></h3>
         <div data-foreach-writeup="writeupsByMonth">
-            <a href="#">
+            <a data-on-click="[currentPageId, selectedWriteup] = ['writeup', writeup]">
                 <article>
                     <h3 data-bind="writeup.title"></h3>
-                    <p data-bind="writeup.content"></p>
-                    <datetime data-bind="writeup.date"></datetime>
+                    <p data-html="getResume(writeup)"></p>
+                    <datetime data-bind="new Date(writeup.date).toLocaleDateString('fr-FR', {day:'numeric',month:'long',year:'numeric'})"></datetime>
+                    <span data-foreach-author="writeup.authors">
+                        <button class="author" data-bind="author"></button>
+                    </span>
+                    <span data-foreach-tag="writeup.tags">
+                        <button class="tag" data-bind="tag"></button>
+                    </span>
                 </article>
             </a>
         </div>

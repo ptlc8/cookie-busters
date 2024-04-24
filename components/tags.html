@@ -1,1 +1,38 @@
-<h2>Tags</h2>
+<script>
+function getTags(writeups) {
+    return writeups.reduce((acc, writeup) => {
+        for (let tag of writeup.tags) {
+            if (!acc[tag])
+                acc[tag] = 1;
+            else acc[tag]++;
+        }
+        return acc;
+    }, {});
+}
+function getAuthors(writeups) {
+    return writeups.reduce((acc, writeup) => {
+        for (let author of writeup.authors) {
+            if (!acc[author])
+                acc[author] = 1;
+            else acc[author]++;
+        }
+        return acc;
+    }, {});
+}
+</script>
+
+<h2>Étiquettes</h2>
+<section data-foreach-tag-count="getTags(writeups)" data-index="tag" data-update="writeups">
+    <a class="tag">
+        <span data-bind="tag"></span>
+        <span class="count" data-bind="tagCount"></span>
+    </a>
+</section>
+
+<h2>Auteurs</h2>
+<section data-foreach-author-count="getAuthors(writeups)" data-index="author" data-update="writeups">
+    <a class="author">
+        <span data-bind="author"></span>
+        <span class="count" data-bind="authorCount"></span>
+    </a>
+</section>
