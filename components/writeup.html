@@ -17,10 +17,10 @@ fetch('writeups/' + properties.selectedWriteup.id + '/content.md')
     <div>
         <datetime data-bind="new Date(selectedWriteup.date).toLocaleDateString('fr-FR', {day:'numeric',month:'long',year:'numeric'})"></datetime>
         <span data-foreach-author="selectedWriteup.authors">
-            <button class="author" data-bind="author"></button>
+            <button class="author" data-bind="author" data-on-click="[currentPageId, selectedAuthor] = ['author', author]"></button>
         </span>
         <span data-foreach-tag="selectedWriteup.tags">
-            <button class="tag" data-bind="tag"></button>
+            <button class="tag" data-bind="tag" data-on-click="[currentPageId, selectedTag] = ['tag', tag]"></button>
         </span>
     </div>
 </section>

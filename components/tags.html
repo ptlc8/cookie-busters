@@ -23,7 +23,7 @@ function getAuthors(writeups) {
 
 <h2>Étiquettes</h2>
 <section data-foreach-tag-count="getTags(writeups)" data-index="tag" data-update="writeups">
-    <a class="tag">
+    <a class="tag" data-on-click="[currentPageId, selectedTag] = ['tag', tag]">
         <span data-bind="tag"></span>
         <span class="count" data-bind="tagCount"></span>
     </a>
@@ -31,7 +31,7 @@ function getAuthors(writeups) {
 
 <h2>Auteurs</h2>
 <section data-foreach-author-count="getAuthors(writeups)" data-index="author" data-update="writeups">
-    <a class="author">
+    <a class="author" data-on-click="[currentPageId, selectedAuthor] = ['author', author]">
         <span data-bind="author"></span>
         <span class="count" data-bind="authorCount"></span>
     </a>
