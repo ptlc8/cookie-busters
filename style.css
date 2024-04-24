@@ -37,11 +37,8 @@ header navbar {
 }
 
 header navbar a {
-    text-decoration: none;
-    color: black;
     padding: .5em 1em;
     border-radius: 2em;
-    cursor: pointer;
 }
 
 header navbar a:hover {
@@ -51,6 +48,12 @@ header navbar a:hover {
 header navbar a.selected {
     text-decoration: underline;
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    color: inherit;
 }
 
 main {
@@ -86,4 +89,32 @@ article {
 article h3 {
     font-size: 1.5em;
     margin: 0;
+}
+
+
+.glitch { /* https://codepen.io/cbanlawi/pen/xxRBeMY */
+    animation: glitch 750ms infinite;
+}
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+    }
+    15% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+    }
+    16% {
+        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+    }
+    50% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+    }
+    99% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+    }
+    100% {
+        text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff, -0.04em -0.025em 0 #fffc00;
+    }
 }

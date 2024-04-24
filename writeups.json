@@ -1,0 +1,15 @@
+[
+    {
+        "title": "[HackDay] Ping bond",
+        "content": "Writeup 1 content",
+        "date": "2024-01-17",
+        "author": "HazmatBoumiz",
+        "tags": ["web"]
+    },
+    {
+        "title": "[BitsCTF] Pwn",
+        "content": "Writeup 2 content",
+        "date": "2024-02-16",
+        "tags": ["exploit"]
+    }
+]

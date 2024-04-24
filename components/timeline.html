@@ -1,1 +1,32 @@
+<script>
+function sortByMonth(writeups) {
+    return writeups.reduce((acc, writeup) => {
+        let month = new Date(writeup.date).toLocaleDateString("fr-FR", {month: "long", year: "numeric"});
+        if (!acc[month])
+            acc[month] = []
+        acc[month].push(writeup);
+        return acc;
+    }, {});
+}
+
+properties.writeups = properties.writeups ?? [];
+fetch('writeups.json')
+    .then(response => response.json())
+    .then(data => properties.writeups = data);
+</script>
+
 <h2>Timeline</h2>
+<div data-foreach-writeups-by-month="sortByMonth(writeups)" data-index="month" data-update="writeups">
+    <div>
+        <h3 data-bind="month"></h3>
+        <div data-foreach-writeup="writeupsByMonth">
+            <a href="#">
+                <article>
+                    <h3 data-bind="writeup.title"></h3>
+                    <p data-bind="writeup.content"></p>
+                    <datetime data-bind="writeup.date"></datetime>
+                </article>
+            </a>
+        </div>
+    </div>
+</div>

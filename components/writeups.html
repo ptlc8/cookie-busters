@@ -1,19 +1,12 @@
 <script>
-    properties.writeups = [
-        {
-            title: "Writeup 1",
-            content: "Writeup 1 content",
-            date: "2021-01-01"
-        },
-        {
-            title: "Writeup 2",
-            content: "Writeup 2 content",
-            date: "2021-01-02"
-        }
-    ];
+properties.writeups = properties.writeups ?? [];
+fetch('writeups.json')
+    .then(response => response.json())
+    .then(data => properties.writeups = data);
 </script>
+
 <h2>Writeups</h2>
-<div data-foreach-writeup="writeups">
+<div data-foreach-writeup="writeups" data-update="writeups">
     <article>
         <h3 data-bind="writeup.title"></h3>
         <p data-bind="writeup.content"></p>
