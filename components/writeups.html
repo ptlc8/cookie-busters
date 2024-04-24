@@ -1,15 +1,9 @@
-<script>
-function getResume(writeup) {
-    return marked.parse(writeup.content).slice(0, 256);
-}
-</script>
-
 <h2>Comptes rendus</h2>
 <div data-foreach-writeup="writeups" data-update="writeups">
     <a data-on-click="[currentPageId, selectedWriteup] = ['writeup', writeup]">
         <article>
             <h3 data-bind="writeup.title"></h3>
-            <p data-html="getResume(writeup)"></p>
+            
             <datetime data-bind="new Date(writeup.date).toLocaleDateString('fr-FR', {day:'numeric',month:'long',year:'numeric'})"></datetime>
             <span data-foreach-author="writeup.authors">
                 <button class="author" data-bind="author"></button>
