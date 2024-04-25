@@ -1,4 +1,9 @@
+<a class="back" href="#tags" data-on-click="currentPageId = 'tags'">
+    ⬅ Toutes les étiquettes
+</a>
+
 <h2 data-bind="selectedTag"></h2>
+
 <div data-foreach-writeup="writeups" data-update="writeups">
     <span>
         <a data-if="writeup.tags.includes(selectedTag)" data-on-click="[currentPageId, selectedWriteup] = ['writeup', writeup]">

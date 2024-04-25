@@ -1,4 +1,9 @@
+<a class="back" href="#tags" data-on-click="currentPageId = 'tags'">
+    ⬅ Tous les auteurs
+</a>
+
 <h2 data-bind="selectedAuthor"></h2>
+
 <div data-foreach-writeup="writeups" data-update="writeups">
     <span>
         <a data-if="writeup.authors.includes(selectedAuthor)" data-on-click="[currentPageId, selectedWriteup] = ['writeup', writeup]">

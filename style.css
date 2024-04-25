@@ -110,6 +110,10 @@ article h3 {
     margin: 0;
 }
 
+article:hover h3 {
+    text-decoration: underline;
+}
+
 .tag, .author {
     display: inline-block;
     background-color: #f1f1f1;
@@ -141,6 +145,15 @@ article h3 {
     max-width: 100%;
     height: auto;
     margin: auto;
+}
+
+a.back {
+    background-color: #fc5d5d;
+    color: #ffffff;
+    border-radius: .4em;
+    padding: .5em 1em;
+    font-weight: bold;
+    font-size: 0.8em;
 }
 
 .glitch { /* https://codepen.io/cbanlawi/pen/xxRBeMY */

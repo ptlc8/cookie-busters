@@ -9,6 +9,10 @@ fetch('writeups/' + properties.selectedWriteup.id + '/content.md')
 </script>
 
 <section>
+    <a class="back" href="#writeups" data-on-click="currentPageId = 'writeups'">
+        ⬅ Tous les comptes rendus
+    </a>    
+
     <h2 data-bind="selectedWriteup.title"></h2>
     
     <div class="markdown" data-html="markdownParser.parse(writeupContent)" data-update="writeupContent"></div>
