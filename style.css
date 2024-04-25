@@ -1,6 +1,8 @@
 :root {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f1f1f1;
+    font-size: 18px;
+    color: #333;
 }
 
 body {
@@ -28,13 +30,15 @@ header {
 
 header img {
     width: auto;
-    height: 5em;
+    height: 4em;
+    vertical-align: middle;
 }
 
 header h1 {
     cursor: pointer;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
+    margin: 0;
 }
 
 header navbar {
@@ -145,6 +149,13 @@ article:hover h3 {
     max-width: 100%;
     height: auto;
     margin: auto;
+}
+
+.markdown pre {
+    overflow-x: auto;
+    font-size: .8em;
+    background-color: #f1f1f1;
+    padding: 1em;
 }
 
 a.back {
