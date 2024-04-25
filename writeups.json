@@ -1,7 +1,7 @@
 [
 	{
+		"id": "Pingbond",
 		"title": "[HackDay] Ping bond",
-		"content": "Writeup 1 content",
 		"date": "2024-01-17",
 		"tags": [
 			"web"
@@ -11,8 +11,8 @@
 		]
 	},
 	{
+		"id": "Pwn",
 		"title": "[BitsCTF] Pwn",
-		"content": "Writeup 2 content",
 		"date": "2024-02-16",
 		"tags": [
 			"exploit"
@@ -22,8 +22,8 @@
 		]
 	},
 	{
+		"id": "LIGAbue",
 		"title": "[TeamItaly CTF 2023] LIGAbue",
-		"content": "j’ai téléchargé le fichier du challenge: \"chall.otf\"Je me suis ensuite renseigné sur le format du fichier. C’est un type de fichier qui contient une police d’écriture.\n\nVoici ce qu’on obtient en l’affichant :\n\n![](/assets/writeups/LIGAbue/LIGAbue0)\n\nRien de très concluant…\n\nJ’ai ensuite cherché des chaines de caractères cachées dans le fichier:\n\n![](/assets/writeups/LIGAbue/LIGAbue1)\n\n![](/assets/writeups/LIGAbue/LIGAbue2)\n\nOn y trouve un lien vers une video youtube ![](https://www.youtube.com/watch?v=g6tuepmUmJg)\n\net cette suite de nombre allant de s0000 à s2047.\n\nJ’ai ensuite téléchargé un logiciel d’édition de police et j’ai ouvert le fichier dedans.\n\nOn peut y voir notre main et rien pour les autres lettres.\n\n![](/assets/writeups/LIGAbue/LIGAbue3)\n\nMais en allant tout en bas du fichier, on retrouve une suite de \"NO\" numéroté de s0000 à s2047.\n\n![](/assets/writeups/LIGAbue/LIGAbue)\n\nmais parmis ces \"NO\" il y a un \"YES\" s1773\n\nEn regardant les infos du glyph, on trouve un autre nombre s1548 ainsi qu’un caractère \"}\". C’est\n\nle symbole de fin du flag qui suit la nomenclature «flag{...} » ainsi que la référence du caractère\n\nsuivant (s1548 qui nous donne \" !\"ainsi que la référence suivante)\n\n![](/assets/writeups/LIGAbue/LIGAbue5)\n\nOn continue ainsi jusqu’à récupérer tout le flag :\n\n**flag{f0nt_l1g4tur3s_c4n_b3_4_f1n173_s7at3_m4ch1n3!!}**\n\n",
 		"date": "2023-09-30",
 		"tags": [
 			"sténographie"
@@ -33,8 +33,8 @@
 		]
 	},
 	{
-		"title": "[Huntress CTF 2023] hot-off-the-press",
-		"content": "Ce challenge nous demande d’étudier un maliciel. On télécharge donc le fichier et on regarde quel genre de fichier c’est:\n\n![](/assets/writeups/hot-off-the-press/hot-off-the-press0.png)\n\nApparemment c’est une archive de type Uharc. Après quelques recherches,\n\nje comprend que c’est un ancien type d’archive windows. Je lance donc\n\nune machine virtuelle windows7 et télécharge un logiciel me permetant de\n\nlire ce type d’archive:![](/assets/writeups/hot-off-the-press/hot-off-the-press1.png) \n\n![](/assets/writeups/hot-off-the-press/hot-off-the-press2.png) \n\naprès désarchivage, on obtient ce script powershell:\n\n![](/assets/writeups/hot-off-the-press/hot-off-the-press3.png)\n\n # \/!\\\/!\\\/!\\À FINIR\/!\\\/!\\\/!\\",
+		"id": "hot_off_the_press" ,
+		"title": "[Huntress CTF 2023] hot_off_the_press",
 		"date": "2023-10-05",
 		"tags": [
 			"maliciel",
@@ -46,8 +46,8 @@
 		]
 	},
 	{
-		"title": "[Huntress CTF 2023] baseffff+1",
-		"content": "C'est un petit challenge assez simple. On a un fichier texte, qui, ouvert nous donne: ![](/assets/writeups/baseFFFF1/baseFFFF1_0.png)\n\n On fait l'addition et on converti en décimal FFFF+1 = 65536.\n\n Un ![décodeur de base 65536 en ligne](https://www.better-converter.com/Encoders-Decoders/Base65536-Decode)  nous donne \n\n![](/assets/writeups/baseFFFF1/baseFFFF1_1.png) le flag est donc:\n\n **flag{716abce880f09b7cdc7938eddf273648}** ",
+		"id": "baseFFFF1",
+		"title": "[Huntress CTF 2023] BaseFFFF+1",
 		"date": "2023-10-04",
 		"tags": [
 			"cryptographie"
