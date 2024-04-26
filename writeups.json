@@ -70,4 +70,17 @@
 			"HazmatBoumiz"
 		]
 	}
+	},
+	{
+		"id": "Flowers",
+		"title": "[DAM CTF 2023] Flowers",
+		"date": "2024-04-07",
+		"tags": [
+			"OSINT"
+		],
+		"authors": [
+			"dumb_shadok", "Xweiss"
+		]
+	}
+
 ]
