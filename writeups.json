@@ -1,6 +1,6 @@
 [
 	{
-		"id": "Pingbond",
+		"id": "PingBond",
 		"title": "[HackDay 2024] Ping bond",
 		"date": "2024-01-17",
 		"tags": [
@@ -15,7 +15,8 @@
 		"title": "[BitsCTF 2024] Pwn",
 		"date": "2024-02-16",
 		"tags": [
-			"exploit"
+			"pwn",
+			"attaque temporelle"
 		],
 		"authors": [
 			"HazmatBoumiz"
