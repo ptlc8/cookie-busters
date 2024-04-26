@@ -69,7 +69,29 @@
 		"authors": [
 			"HazmatBoumiz"
 		]
-	}
+	},
+	{
+		"id": "Cryptoneat",
+		"title": "[DG'hAck] Cryptoneat",
+		"date": "2023-12-01",
+		"tags": [
+			"cryptographie"
+		],
+		"authors": [
+			"Xweiss"
+		]
+	},
+	{
+		"id": "FeedThisDragon",
+		"title": "[DG'hAck] Feed This Dragon",
+		"date": "2023-11-21",
+		"tags": [
+			"web"
+		],
+		"authors": [
+			"Xweiss",
+			"HazmatBoumiz"
+		]
 	},
 	{
 		"id": "Flowers",
