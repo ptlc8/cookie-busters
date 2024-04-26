@@ -1,7 +1,7 @@
 [
 	{
 		"id": "Pingbond",
-		"title": "[HackDay] Ping bond",
+		"title": "[HackDay 2024] Ping bond",
 		"date": "2024-01-17",
 		"tags": [
 			"web"
@@ -12,7 +12,7 @@
 	},
 	{
 		"id": "Pwn",
-		"title": "[BitsCTF] Pwn",
+		"title": "[BitsCTF 2024] Pwn",
 		"date": "2024-02-16",
 		"tags": [
 			"exploit"
@@ -38,7 +38,7 @@
 		"date": "2023-10-05",
 		"tags": [
 			"maliciel",
-			"désobfuscation"
+			"désoffuscation"
 		],
 		"authors": [
 			"dumb_shadok",
@@ -54,6 +54,19 @@
 		],
 		"authors": [
 			"dumb_shadok"
+		]
+	},
+	{
+		"id": "SuperAdminPanel",
+		"title": "[TeamItaly CTF 2023] Super Admin Panel",
+		"date": "2023-09-30",
+		"tags": [
+			"web",
+			"xss",
+			"rebinding dns"
+		],
+		"authors": [
+			"HazmatBoumiz"
 		]
 	}
 ]
