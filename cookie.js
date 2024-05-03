@@ -1,7 +1,7 @@
 "use strict";
 {
     let mouseMove = 0;
-    document.body.addEventListener('mousemove', event => {
+    document.addEventListener('mousemove', event => {
         mouseMove += Math.abs(event.movementX) + Math.abs(event.movementY);
         if (mouseMove < 200) return;
         mouseMove = 0;
