@@ -90,6 +90,7 @@ On obtient alors le mot de passe : `GINGERDANGERHERMOINEGRANGER`.
 #### Niveau 3
 
 On atteint alors le niveau 3, et on peut réutiliser le même script pour trouver le mot de passe du niveau 3.
+Petite optimisation en ordonnant les lettres par fréquence d'apparition.
 
 ```python
 import socket
