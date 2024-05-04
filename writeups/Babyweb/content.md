@@ -6,7 +6,7 @@ On arrive sur le site, et on peut voir cette page
 
 en regardant le code source, on trouve ce chemin en commentaire
 
-![au cas ou ça s'affiche pas.](babywep1.png)
+![au cas ou ça s'affiche pas.](babyweb1.png)
 
 
 Sur ce chemin, on arrive sur cette page 
