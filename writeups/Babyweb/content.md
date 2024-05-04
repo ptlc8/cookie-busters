@@ -1,7 +1,7 @@
 On arrive sur le site, et on peut voir cette page
 
 
-![au cas ou ça s'affiche pas.](cookie-busters/writeups/babyweb/underconstruction.png)
+![au cas ou ça s'affiche pas.](underconstruction.png)
 
 
 en regardant le code source, on trouve ce chemin en commentaire
