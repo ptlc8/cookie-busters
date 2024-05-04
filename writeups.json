@@ -114,6 +114,17 @@
 		"authors": [
 			"Card"
 		]
+	},
+	{
+		"id": "DiceDiceGoose",
+		"title": "[DiceCTF 2024] DiceDiceGoose",
+		"date": "2024-02-03",
+		"tags": [
+			"Web"
+		],
+		"authors": [
+			"Card"
+		]
 	}
 
 ]
