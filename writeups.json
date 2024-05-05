@@ -116,6 +116,28 @@
 		]
 	},
 	{
+		"id": "BabyRev",
+		"title": "[BitsCTF 2024] BabyRev",
+		"date": "2024-02-16",
+		"tags": [
+			"Rev"
+		],
+		"authors": [
+			"Ridini", "Card"
+		]
+	},
+	{
+		"id": "LadyLove",
+		"title": "[BitsCTF 2024] LadyLove",
+		"date": "2024-02-16",
+		"tags": [
+			"OSINT"
+		],
+		"authors": [
+			"Ridini"
+		]
+	},
+	{
 		"id": "dicedicegoose",
 		"title": "[DiceCTF 2024] DiceDiceGoose",
 		"date": "2024-02-03",
